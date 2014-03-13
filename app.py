@@ -1,5 +1,6 @@
 from bottle import run, request, route, TEMPLATE_PATH, jinja2_view
 import pygeoip
+import os
 
 gip4 = pygeoip.GeoIP('/home/pfe2/Desktop/app/geo/GeoIP.dat', pygeoip.MEMORY_CACHE)
 gicity = pygeoip.GeoIP('/home/pfe2/Desktop/app/geo/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
@@ -31,3 +32,4 @@ def index():
                 'proxy': proxy}
 
 run(host='0.0.0.0', port=8089, debug=True)
+run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
