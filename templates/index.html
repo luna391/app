@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <table>
+                <tr>
+                        <td align="right"><h3>Your IP is:</h3></td>
+                        <td align="left"><h1>{{ your_ip }}</h1></td>
+                </tr>
+                <tr>
+                        <td align="right"><h3>Country:</h3></td>
+                        <td align="left"><h1>{{ your_location }}</h1></td>
+                </tr>
+                <tr>
+                        <td align="right"><h3>City:</h3></td>
+                        <td align="left"><h1>{{ your_city }}</h1></td>
+                </tr>
+                <tr>
+                        <td align="right"><h3>Longitude:</h3></td>
+                        <td align="left"><h1>{{ your_longitude }}</h1></td>
+                </tr>
+                <tr>
+                        <td align="right"><h3>Latitude:</h3></td>
+                        <td align="left"><h1>{{ your_latitude }}</h1></td>
+                </tr>
+                <tr>
+                        <td align="right"><h3>Proxy:</h3></td>
+                        <td align="left"><h1>{{ proxy }}</h1></td>
+                </tr>
+        </table>
+{% endblock %}
