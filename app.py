@@ -2,8 +2,8 @@ from bottle import run, request, route, TEMPLATE_PATH, jinja2_view
 import pygeoip
 import os
 
-gip4 = pygeoip.GeoIP('/home/pfe2/Desktop/app/geo/GeoIP.dat', pygeoip.MEMORY_CACHE)
-gicity = pygeoip.GeoIP('/home/pfe2/Desktop/app/geo/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
+gip4 = pygeoip.GeoIP('./geo/GeoIP.dat', pygeoip.MEMORY_CACHE)
+gicity = pygeoip.GeoIP('./geo/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
 
 TEMPLATE_PATH[:] = ['templates']
 
