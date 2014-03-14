@@ -26,9 +26,9 @@ def index():
         return {'title':'Your IP is:',
                 'your_ip':your_ip,
                 'your_location': your_location,
-                #'your_city': your_city['city'],
-                #'your_longitude': your_city['longitude'],
-                #'your_latitude': your_city['latitude'],
+                'your_city': your_city['city'],
+                'your_longitude': your_city['longitude'],
+                'your_latitude': your_city['latitude'],
                 'proxy': proxy}
 
 #run(host='0.0.0.0', port=8089, debug=True)
