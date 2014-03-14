@@ -2,8 +2,8 @@ from bottle import run, request, route, TEMPLATE_PATH, jinja2_view
 import pygeoip
 import os
 
-gip4 = pygeoip.GeoIP('./app/geo/GeoIP.dat', pygeoip.MEMORY_CACHE)
-gicity = pygeoip.GeoIP('./app/geo/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
+gip4 = pygeoip.GeoIP('./geo/GeoIP.dat', pygeoip.MEMORY_CACHE)
+gicity = pygeoip.GeoIP('./geo/GeoLiteCity.dat', pygeoip.MEMORY_CACHE)
 
 TEMPLATE_PATH[:] = ['templates']
 
@@ -31,5 +31,5 @@ def index():
                 #'your_latitude': your_city['latitude'],
                 'proxy': proxy}
 
-run(host='0.0.0.0', port=8089, debug=True)
+#run(host='0.0.0.0', port=8089, debug=True)
 run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
